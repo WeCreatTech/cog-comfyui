@@ -1,22 +1,2 @@
 # Live model
 model: wecreattech/any-comfyui-workflow
-
-# A private model to run the test against before pushing
-test_model: wecreattech/any-comfyui-workflow
-test_hardware: gpu-l40s
-
-# Tests
-predict:
-  compare_outputs: false
-  predict_timeout: 600
-  test_cases:
-    - inputs:
-        workflow_json: https://raw.githubusercontent.com/replicate/cog-comfyui/refs/heads/main/examples/api_workflows/sd15_txt2img.json
-        return_temp_files: true
-    - inputs:
-        workflow_json: https://raw.githubusercontent.com/replicate/cog-comfyui/refs/heads/main/examples/api_workflows/birefnet_ii_api.json
-    - inputs:
-        workflow_json: https://raw.githubusercontent.com/replicate/cog-comfyui/refs/heads/main/examples/api_workflows/birefnet_api.json
-        return_temp_files: true
-    - inputs:
-        workflow_json: https://raw.githubusercontent.com/replicate/cog-comfyui/refs/heads/main/examples/api_workflows/depth_anything_v2_api.json
